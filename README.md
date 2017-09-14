@@ -1,5 +1,5 @@
 # spring-boot-starter-dubbo-example
-spring-boot-starter-dubbo-example是spring-boot-starter-dubbo的示例项目。
+spring-boot-starter-dubbo-example是[spring-boot-starter-dubbo](https://gitee.com/reger/spring-boot-starter-dubbo)的示例项目。
 
 ### example-api
 示例的api项目，api项目用来定义dubbo发布出来的服务接口
