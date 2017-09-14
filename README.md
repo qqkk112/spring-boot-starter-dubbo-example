@@ -11,6 +11,7 @@ spring-boot-starter-dubbo-example是<a href="https://gitee.com/reger/spring-boot
 示例的服务调用者，用来定义服务的调用
 
 ## 使用示例项目
+
 克隆示例项目
 ```yml
 git clone git@gitee.com:reger/spring-boot-starter-dubbo-example.git
@@ -21,6 +22,7 @@ cd spring-boot-starter-dubbo-example
 mvn package
 ```
 在 example-provider/target/ 和  example-consumer 项目中有对应war包，在本地安装zookeeper服务
+
 启动提供者
 ```cmd
 java -jar example-provider-1.0.1.jar --spring.dubbo.address=127.0.0.1  --spring.dubbo.port=2181 
