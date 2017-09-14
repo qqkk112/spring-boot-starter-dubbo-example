@@ -17,7 +17,6 @@
 		<version>1.5.6.RELEASE</version>
 		<relativePath />
 	</parent>
-
  
     <licenses>
         <license>
@@ -29,9 +28,9 @@
     
     <scm>
         <tag>master</tag>
-        <url>https://gitee.com/reger/spring-boot-starter-dubbo</url>
-        <connection>scm:git:git@gitee.com:reger/spring-boot-starter-dubbo.git</connection>
-        <developerConnection>scm:git:git@gitee.com:reger/spring-boot-starter-dubbo.git</developerConnection>
+        <url>https://gitee.com/reger/spring-boot-starter-dubbo-example</url>
+        <connection>scm:git:git@gitee.com:reger/spring-boot-starter-dubbo-example.git</connection>
+        <developerConnection>scm:git:git@gitee.com:reger/spring-boot-starter-dubbo-example.git</developerConnection>
     </scm>
     
     <developers>
@@ -41,7 +40,6 @@
             <organization>reger.gitee.com</organization>
         </developer>
     </developers>
-    
 
 	<repositories>
 		<repository>
