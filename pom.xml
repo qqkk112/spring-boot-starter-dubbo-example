@@ -5,19 +5,25 @@
 
 	<groupId>com.gitee.reger</groupId>
 	<artifactId>spring-boot-starter-dubbo-example</artifactId>
-	<version>1.0.2</version>
+	<version>${spring-boot-starter-dubbo.version}</version>
 	<packaging>pom</packaging>
 
 	<name>spring-boot-starter-dubbo-example</name>
 	<description>这是一个spring-boot-starter-dubbo的示例项目</description>
 
+	<properties>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
+		<spring-boot-starter-dubbo.version>1.0.2</spring-boot-starter-dubbo.version>
+	</properties>
+	
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.7.RELEASE</version>
 		<relativePath />
 	</parent>
- 
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
@@ -68,6 +74,20 @@
 		</repository>
 	</distributionManagement>
 	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.gitee.reger</groupId>
+				<artifactId>spring-boot-starter-dubbo-example-api</artifactId>
+				<version>${spring-boot-starter-dubbo.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.gitee.reger</groupId>
+				<artifactId>spring-boot-starter-dubbo</artifactId>
+				<version>${spring-boot-starter-dubbo.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 	<build>
 		<plugins>
 			<plugin>
@@ -86,16 +106,10 @@
 			</plugin>
 		</plugins>
 	</build>
-	
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>1.8</java.version>
-	</properties>
 
 	<modules>
-		<module>example-api</module>
-		<module>example-consumer</module>
-		<module>example-provider</module>
+		<module>spring-boot-starter-dubbo-example-api</module>
+		<module>spring-boot-starter-dubbo-example-consumer</module>
+		<module>spring-boot-starter-dubbo-example-provider</module>
 	</modules>
 </project>
