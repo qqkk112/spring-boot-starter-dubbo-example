@@ -78,7 +78,7 @@
 		<dependencies>
 			<dependency>
 				<groupId>com.gitee.reger</groupId>
-				<artifactId>spring-boot-starter-dubbo-example-api</artifactId>
+				<artifactId>example-api</artifactId>
 				<version>${spring-boot-starter-dubbo.version}</version>
 			</dependency>
 			<dependency>

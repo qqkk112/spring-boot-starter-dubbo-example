@@ -11,7 +11,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.gitee.reger</groupId>
-			<artifactId>spring-boot-starter-dubbo-example-api</artifactId>
+			<artifactId>example-api</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.gitee.reger</groupId>
