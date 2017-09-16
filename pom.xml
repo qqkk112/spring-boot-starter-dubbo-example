@@ -5,7 +5,7 @@
 
 	<groupId>com.gitee.reger</groupId>
 	<artifactId>spring-boot-starter-dubbo-example</artifactId>
-	<version>${spring-boot-starter-dubbo.version}</version>
+	<version>1.0.2</version>
 	<packaging>pom</packaging>
 
 	<name>spring-boot-starter-dubbo-example</name>
@@ -108,8 +108,8 @@
 	</build>
 
 	<modules>
-		<module>spring-boot-starter-dubbo-example-api</module>
-		<module>spring-boot-starter-dubbo-example-consumer</module>
-		<module>spring-boot-starter-dubbo-example-provider</module>
+		<module>example-api</module>
+		<module>example-consumer</module>
+		<module>example-provider</module>
 	</modules>
 </project>
