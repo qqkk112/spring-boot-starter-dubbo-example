@@ -2,7 +2,6 @@ package com.test.dubbo.consumer;
 
 import java.util.concurrent.TimeUnit;
 
-import org.jboss.netty.util.Timeout;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 

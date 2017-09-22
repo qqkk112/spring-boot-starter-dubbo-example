@@ -28,12 +28,12 @@ public class ConsumerFilter implements Filter {
 		curContext.get().putIfAbsent(trace_key, UUID.randomUUID().toString().replace("-", ""));
 		log.info("0.---->>>在隐式传参中查找参数--->>test={}",curContext.getAttachment(trace_key));
 		curContext.setAttachment(trace_key,   String.valueOf(curContext.get(trace_key)));
-		log.info("1.---->>>在上下文中查找资源--->>test={}",curContext.get(trace_key));
+		log.info("1.---->>>在上下文中查找参数--->>test={}",curContext.get(trace_key));
 		log.info("2.---->>>在隐式传参中查找参数--->>test={}",curContext.getAttachment(trace_key));
     	try {
     		return invoker.invoke(invocation);
 		} finally { 
-			log.info("3.---->>>在上下文中查找资源--->>test={}",curContext.get(trace_key));
+			log.info("3.---->>>在上下文中查找参数--->>test={}",curContext.get(trace_key));
 			log.info("4.---->>>在隐式传参中查找参数--->>test={}",curContext.getAttachment(trace_key));
 		}
     }
