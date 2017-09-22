@@ -1,5 +1,8 @@
 package com.test.dubbo.consumer;
 
+import java.util.concurrent.TimeUnit;
+
+import org.jboss.netty.util.Timeout;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -30,6 +33,7 @@ public class DubboReferenceConsumer implements CommandLineRunner {
 		System.err.println();
 		System.err.println(bidService.getUser(user));
 		try {
+			TimeUnit.SECONDS.sleep(10);
 			bidService.throwThrowable();
 		} catch (Throwable e) {
 			System.err.println(e.getMessage());
