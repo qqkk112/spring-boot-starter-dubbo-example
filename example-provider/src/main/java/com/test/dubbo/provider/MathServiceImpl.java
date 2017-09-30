@@ -8,7 +8,7 @@ import com.alibaba.dubbo.config.annotation.Service;
 import com.test.dubbo.model.User;
 import com.test.dubbo.service.MathService;
 
-@Service(validation = "true", protocol="dubbo", interfaceClass = MathService.class)
+@Service(protocol="dubbo")
 public class MathServiceImpl implements MathService {
 
 	@Override
