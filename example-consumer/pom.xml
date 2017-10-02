@@ -6,7 +6,7 @@
 		<artifactId>spring-boot-starter-dubbo-example</artifactId>
 		<version>1.0.4</version>
 	</parent>
-	<artifactId>spring-boot-starter-dubbo-example-consumer</artifactId>
+	<artifactId>example-consumer</artifactId>
 
 	<dependencies>
 		<dependency>
