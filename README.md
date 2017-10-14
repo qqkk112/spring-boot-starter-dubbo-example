@@ -25,10 +25,10 @@ mvn package
 
 启动提供者
 ```cmd
-java -jar example-provider-1.0.1.jar --spring.dubbo.address=127.0.0.1  --spring.dubbo.port=2181 
+java -jar example-provider-1.0.1.jar --spring.dubbo.registry.address=127.0.0.1  --spring.dubbo.registry.port=2181 
 ```
 启动调用者
 ```cmd
-java -jar example-consumer-1.0.1.jar --spring.dubbo.address=127.0.0.1  --spring.dubbo.port=2181 
+java -jar example-consumer-1.0.1.jar --spring.dubbo.registry.address=127.0.0.1  --spring.dubbo.registry.port=2181 
 ```
 控制台可以看到调用日志
