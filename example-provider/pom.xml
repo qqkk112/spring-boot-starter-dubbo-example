@@ -3,7 +3,7 @@
   <parent>
     <groupId>com.gitee.reger</groupId>
     <artifactId>spring-boot-starter-dubbo-example</artifactId>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
   </parent>
   <artifactId>example-provider</artifactId>
   
