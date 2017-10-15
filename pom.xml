@@ -73,21 +73,6 @@
 			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
 		</repository>
 	</distributionManagement>
-	
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>com.gitee.reger</groupId>
-				<artifactId>example-api</artifactId>
-				<version>${spring-boot-starter-dubbo.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.gitee.reger</groupId>
-				<artifactId>spring-boot-starter-dubbo</artifactId>
-				<version>${spring-boot-starter-dubbo.version}</version>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
 	<build>
 		<plugins>
 			<plugin>
@@ -106,6 +91,21 @@
 			</plugin>
 		</plugins>
 	</build>
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.gitee.reger</groupId>
+				<artifactId>example-api</artifactId>
+				<version>${spring-boot-starter-dubbo.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.gitee.reger</groupId>
+				<artifactId>spring-boot-starter-dubbo</artifactId>
+				<version>${spring-boot-starter-dubbo.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<modules>
 		<module>example-api</module>
