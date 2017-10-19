@@ -3,15 +3,10 @@
   <parent>
     <groupId>com.gitee.reger</groupId>
     <artifactId>spring-boot-starter-dubbo-example</artifactId>
-    <version>1.0.5</version>
+    <version>1.0.6</version>
   </parent>
   <artifactId>example-api</artifactId>
   
   <dependencies>
-  	<dependency>
-	    <groupId>org.apache.thrift</groupId>
-	    <artifactId>libthrift</artifactId>
-	    <version>0.8.0</version>
-	</dependency>
   </dependencies>
 </project>
