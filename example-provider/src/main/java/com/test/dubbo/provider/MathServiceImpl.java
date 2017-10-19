@@ -19,7 +19,7 @@ public class MathServiceImpl implements MathService {
 
 	@Override
 	public List<Object> toList(Object... args) {
-		List<Object> list = new ArrayList<>();
+		List<Object> list = new ArrayList<Object>();
 		Collections.addAll(list, args);
 		System.err.println("返回的数据"+list);
 		return list;

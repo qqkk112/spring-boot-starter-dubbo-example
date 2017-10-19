@@ -14,7 +14,7 @@
 	<properties>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>1.7</java.version>
+		<java.version>1.6</java.version>
 		<spring-boot-starter-dubbo.version>1.0.6</spring-boot-starter-dubbo.version>
 	</properties>
 	
