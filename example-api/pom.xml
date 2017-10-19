@@ -7,6 +7,11 @@
   </parent>
   <artifactId>example-api</artifactId>
   
+  	<properties>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.7</java.version>
+	</properties>
   <dependencies>
   </dependencies>
 </project>
