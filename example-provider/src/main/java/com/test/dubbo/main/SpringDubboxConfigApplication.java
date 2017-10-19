@@ -27,7 +27,7 @@ public class SpringDubboxConfigApplication implements InitializingBean,Disposabl
 	public void destroy() throws Exception {
 		latch.countDown();
 		context.close();
-		System.err.println("服务提供者等待结束------>>服务关闭");
+		System.err.println("服务提供者关闭------>>服务关闭");
 	}
 	
 }
