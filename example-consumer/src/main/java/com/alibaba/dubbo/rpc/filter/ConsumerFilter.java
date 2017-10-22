@@ -25,7 +25,8 @@ public class ConsumerFilter implements Filter {
     public Result invoke(Invoker<?> invoker, Invocation invocation) throws RpcException {
 
 		RpcContext curContext = RpcContext.getContext();
-		curContext.get().putIfAbsent(trace_key, UUID.randomUUID().toString().replace("-", ""));
+		if(!curContext.get().containsKey(trace_key))
+			curContext.get().put(trace_key, UUID.randomUUID().toString().replace("-", ""));
 		log.info("0.---->>>在隐式传参中查找参数--->>test={}",curContext.getAttachment(trace_key));
 		curContext.setAttachment(trace_key,   String.valueOf(curContext.get(trace_key)));
 		log.info("1.---->>>在上下文中查找参数--->>test={}",curContext.get(trace_key));
