@@ -31,4 +31,9 @@
 			</plugin>
 		</plugins>
 	</build>
+	<description>这是一个spring-boot-starter-dubbo的示例项目的消费者</description>
+	<organization>
+		<url>https://gitee.com/lei0719/spring-boot-starter-dubbo-example</url>
+		<name>reger</name>
+	</organization>
 </project>

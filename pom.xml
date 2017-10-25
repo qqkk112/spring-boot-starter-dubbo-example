@@ -34,7 +34,7 @@
     
     <scm>
         <tag>master</tag>
-        <url>https://gitee.com/reger/spring-boot-starter-dubbo-example</url>
+        <url>https://gitee.com/lei0719/spring-boot-starter-dubbo-example</url>
         <connection>scm:git:git@gitee.com:reger/spring-boot-starter-dubbo-example.git</connection>
         <developerConnection>scm:git:git@gitee.com:reger/spring-boot-starter-dubbo-example.git</developerConnection>
     </scm>
@@ -112,4 +112,8 @@
 		<module>example-consumer</module>
 		<module>example-provider</module>
 	</modules>
+	<organization>
+		<url>https://gitee.com/lei0719/spring-boot-starter-dubbo-example</url>
+		<name>reger</name>
+	</organization>
 </project>
