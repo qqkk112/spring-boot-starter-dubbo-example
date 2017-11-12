@@ -8,6 +8,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
+import com.test.dubbo.service.MathService;
+
 @SpringBootApplication 
 public class SpringDubboxConfigApplication implements InitializingBean,DisposableBean {
 	private static CountDownLatch latch=new CountDownLatch(1);
@@ -15,6 +17,10 @@ public class SpringDubboxConfigApplication implements InitializingBean,Disposabl
 	
 	public static void main(String[] args) throws InterruptedException {
 		context = SpringApplication.run(SpringDubboxConfigApplication.class, args);
+		
+		MathService mathService=context.getBean(MathService.class);
+		
+		System.err.println(mathService.add(1, 2));
 		latch.await();
 	}
 
