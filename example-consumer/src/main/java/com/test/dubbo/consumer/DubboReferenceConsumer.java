@@ -13,8 +13,8 @@ import com.test.dubbo.service.MathService;
 @Component
 public class DubboReferenceConsumer implements CommandLineRunner {
 	// 使用dubbo原生注入
-//	@Reference
-//	public MathService service;
+	@Reference
+	public MathService service;
 	// 使用兼容注入
 	@Inject
 	public MathService bidService;
