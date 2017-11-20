@@ -1,4 +1,4 @@
-package com.test.dubbo.provider;
+package com.reger.test.provider;
 
 import java.util.ArrayList;
 import java.util.Collections;

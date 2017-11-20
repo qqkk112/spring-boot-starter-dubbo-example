@@ -1,14 +1,14 @@
-package com.test.dubbo.main;
+package com.reger.test.core;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication(scanBasePackages= "com.test.dubbo.consumer")
-public class SpringDubboxConfigApplication implements CommandLineRunner {
+public class DubboLeaderApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringDubboxConfigApplication.class, args);
+		SpringApplication.run(DubboLeaderApplication.class, args);
 	}
 
 	@Override

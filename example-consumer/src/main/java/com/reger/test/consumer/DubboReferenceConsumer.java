@@ -1,6 +1,4 @@
-package com.test.dubbo.consumer;
-
-import java.util.concurrent.TimeUnit;
+package com.reger.test.consumer;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -25,18 +23,13 @@ public class DubboReferenceConsumer implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) {
-//		System.err.println("注入的是同一个对象："+bidService.equals(service));
+		System.err.println("注入的是同一个对象："+bidService.equals(service));
 		System.err.printf("%s+%s=%s", a, b ,  bidService.add(a, b));
 		System.err.println();
 		System.err.printf("list=%s", bidService.toList(1, "22", true, 'b' , user));
 		System.err.println();
 		System.err.println(bidService.getUser(user));
-		try {
-			TimeUnit.SECONDS.sleep(10);
-			bidService.throwThrowable();
-		} catch (Throwable e) {
-			System.err.println(e.getMessage());
-		}
+		bidService.throwThrowable();
 	}
 
 

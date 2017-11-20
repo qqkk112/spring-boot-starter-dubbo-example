@@ -1,4 +1,4 @@
-package com.test.dubbo.main;
+package com.reger.test.core;
 
 import java.util.concurrent.CountDownLatch;
 
@@ -8,19 +8,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
-import com.test.dubbo.service.MathService;
-
 @SpringBootApplication 
-public class SpringDubboxConfigApplication implements InitializingBean,DisposableBean {
+public class DubboLeaderApplication implements InitializingBean,DisposableBean {
 	private static CountDownLatch latch=new CountDownLatch(1);
 	private static ConfigurableApplicationContext context;
 	
 	public static void main(String[] args) throws InterruptedException {
-		context = SpringApplication.run(SpringDubboxConfigApplication.class, args);
-		
-		MathService mathService=context.getBean(MathService.class);
-		
-		System.err.println(mathService.add(1, 2));
+		context = SpringApplication.run(DubboLeaderApplication.class, args);
 		latch.await();
 	}
 
@@ -35,5 +29,6 @@ public class SpringDubboxConfigApplication implements InitializingBean,Disposabl
 		context.close();
 		System.err.println("服务提供者关闭------>>服务关闭");
 	}
+	
 	
 }
