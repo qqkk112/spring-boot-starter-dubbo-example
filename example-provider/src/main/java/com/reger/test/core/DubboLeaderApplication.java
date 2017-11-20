@@ -7,6 +7,9 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Bean;
+
+import com.reger.dubbo.rpc.filter.ProviderFilter;
 
 @SpringBootApplication 
 public class DubboLeaderApplication implements InitializingBean,DisposableBean {
@@ -30,5 +33,12 @@ public class DubboLeaderApplication implements InitializingBean,DisposableBean {
 		System.err.println("服务提供者关闭------>>服务关闭");
 	}
 	
+	@Bean
+	public ProviderFilter providerFilter(){
+		return ( invoker, invocation)->{
+			System.err.println("接口被调用 ------》》"+invoker.getInterface());
+			return invoker.invoke(invocation);
+		};
+	}
 	
 }
