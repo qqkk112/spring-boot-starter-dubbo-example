@@ -29,7 +29,11 @@ public class DubboReferenceConsumer implements CommandLineRunner {
 		System.err.printf("list=%s", bidService.toList(1, "22", true, 'b' , user));
 		System.err.println();
 		System.err.println(bidService.getUser(user));
-		bidService.throwThrowable();
+		try {
+			bidService.throwThrowable();
+		} catch (Exception e) {
+			 System.err.println(e.getMessage());
+		}
 	}
 
 

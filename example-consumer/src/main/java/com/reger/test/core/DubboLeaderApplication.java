@@ -4,7 +4,9 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages= "com.test.dubbo.consumer")
+import com.reger.test.consumer.DubboReferenceConsumer;
+
+@SpringBootApplication(scanBasePackageClasses=DubboReferenceConsumer.class)
 public class DubboLeaderApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {
