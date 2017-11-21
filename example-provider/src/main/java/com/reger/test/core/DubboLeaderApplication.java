@@ -48,6 +48,7 @@ public class DubboLeaderApplication implements InitializingBean,DisposableBean {
 	@Bean
 	public ProviderFilter providerFilter(){
 		return ( invoker, invocation)->{
+			log.info("方法{}被调用 ", invoker.getInterface());
 			return invoker.invoke(invocation);
 		};
 	}
