@@ -20,7 +20,7 @@ public class DubboLeaderApplication implements InitializingBean,DisposableBean {
 	
 	private static final Logger log = LoggerFactory.getLogger(DubboLeaderApplication.class);
 
-	private static CountDownLatch latch=new CountDownLatch(1);
+	private final static CountDownLatch latch=new CountDownLatch(1);
 	private static ConfigurableApplicationContext context;
 	
 	public static void main(String[] args) throws InterruptedException {
@@ -31,14 +31,14 @@ public class DubboLeaderApplication implements InitializingBean,DisposableBean {
 	@Override
 	public void afterPropertiesSet() throws Exception {
 		Utils.register(TestRuntimeException.class);
-		System.err.println("服务提供者启动完毕------>>启动完毕");
+		log.info("服务提供者启动完毕------>>启动完毕");
 	}
 
 	@Override
 	public void destroy() throws Exception {
 		latch.countDown();
 		context.close();
-		System.err.println("服务提供者关闭------>>服务关闭");
+		log.info("服务提供者关闭------>>服务关闭");
 	}
 	
 	/**
