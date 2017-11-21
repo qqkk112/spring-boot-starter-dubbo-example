@@ -24,7 +24,7 @@ public interface MathService {
 	/**
 	 * 抛出异常测试
 	 */
-	void throwThrowable() throws RuntimeException;
+	void throwThrowable();
 	
 	User getUser(User user);
 }

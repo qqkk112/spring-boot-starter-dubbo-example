@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 import com.alibaba.dubbo.config.annotation.Service;
+import com.reger.test.exception.TestRuntimeException;
 import com.test.dubbo.model.User;
 import com.test.dubbo.service.MathService;
 
@@ -26,7 +27,7 @@ public class MathServiceImpl implements MathService {
 	}
 	@Override
 	public void throwThrowable() {
-		throw new RuntimeException("专门抛出一个异常试试异常时！");
+		throw new TestRuntimeException("专门抛出一个异常试试异常时！");
 	}
 
 	@Override
