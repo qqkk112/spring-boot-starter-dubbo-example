@@ -9,9 +9,7 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.Bean;
 
-import com.reger.dubbo.rpc.filter.ProviderFilter;
 import com.reger.dubbo.rpc.filter.Utils;
 import com.reger.test.exception.TestRuntimeException;
 
