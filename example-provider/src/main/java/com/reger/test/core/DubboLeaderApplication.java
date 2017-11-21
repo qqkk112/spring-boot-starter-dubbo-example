@@ -30,7 +30,7 @@ public class DubboLeaderApplication implements InitializingBean,DisposableBean {
 
 	@Override
 	public void afterPropertiesSet() throws Exception {
-		Utils.register(TestRuntimeException.class);
+		Utils.register(TestRuntimeException.class); 
 		log.info("服务提供者启动完毕------>>启动完毕");
 	}
 
