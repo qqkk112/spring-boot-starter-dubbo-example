@@ -27,21 +27,21 @@ public class DubboLeaderApplication implements CommandLineRunner {
 	@Bean
 	public ConsumerFilter consumerFilter1() {
 		return (joinPoint) -> {
-			log.info("1.调用接口 ------》》" + joinPoint.getInvoker().getInterface());
+			log.info("1.调用接口 ------》》" + joinPoint.getInterface());
 			return joinPoint.proceed();
 		};
 	}
 	@Bean
 	public ConsumerFilter consumerFilter2() {
 		return (joinPoint) -> {
-			log.info("2.调用接口 ------》》" + joinPoint.getInvoker().getInterface());
+			log.info("2.调用接口 ------》》" + joinPoint.getInterface());
 			return joinPoint.proceed();
 		};
 	}
 	@Bean
 	public ConsumerFilter consumerFilter3() {
 		return (joinPoint) -> {
-			log.info("3.调用接口 ------》》" + joinPoint.getInvoker().getInterface());
+			log.info("3.调用接口 ------》》" + joinPoint.getInterface());
 			return joinPoint.proceed();
 		};
 	}
