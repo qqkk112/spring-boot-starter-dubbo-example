@@ -18,7 +18,7 @@ import com.reger.test.exception.TestRuntimeException;
 @SpringBootApplication
 public class DubboLeaderApplication implements InitializingBean, DisposableBean {
 
-	private static final Logger log = LoggerFactory.getLogger(DubboLeaderApplication.class);
+	private  final Logger log = LoggerFactory.getLogger(DubboLeaderApplication.class);
 
 	private final static CountDownLatch latch = new CountDownLatch(1);
 	private static ConfigurableApplicationContext context;
@@ -39,28 +39,6 @@ public class DubboLeaderApplication implements InitializingBean, DisposableBean 
 		latch.countDown();
 		context.close();
 		log.info("服务提供者关闭------>>服务关闭");
-	}
-
-	@Bean
-	public ProviderFilter providerFilter1() {
-		return (joinPoint) -> {
-			log.info("1.方法{}被调用 ", joinPoint.getInterface());
-			return joinPoint.proceed();
-		};
-	}
-	@Bean
-	public ProviderFilter providerFilter2() {
-		return (joinPoint) -> {
-			log.info("2.方法{}被调用 ", joinPoint.getInterface());
-			return joinPoint.proceed();
-		};
-	}
-	@Bean
-	public ProviderFilter providerFilter3() {
-		return (joinPoint) -> {
-			log.info("3.方法{}被调用 ", joinPoint.getInterface());
-			return joinPoint.proceed();
-		};
 	}
 
 }

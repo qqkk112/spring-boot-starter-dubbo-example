@@ -5,7 +5,7 @@ logging:
     org.apache.zookeeper: warn
     com.alibaba.dubbo: warn
     com.alibaba.dubbo.rpc.filter: info
-    
+    com.reger: info
 spring:
   dubbo:
     registry:               # 应用注册中心配置项
