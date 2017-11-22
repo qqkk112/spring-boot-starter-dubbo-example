@@ -5,32 +5,45 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import com.alibaba.dubbo.rpc.Result;
 import com.reger.dubbo.rpc.filter.ConsumerFilter;
+import com.reger.dubbo.rpc.filter.JoinPoint;
 
 @Configuration
-public  class ConsumerFilterConfig {
-	
+public class ConsumerFilterConfig {
+
 	private static final Logger log = LoggerFactory.getLogger(ConsumerFilterConfig.class);
 
 	@Bean
 	public ConsumerFilter consumerFilter1() {
-		return (joinPoint) -> {
-			log.info("1.调用接口 ------》》" + joinPoint.getInterface());
-			return joinPoint.proceed();
+		return new ConsumerFilter() {
+			@Override
+			public Result invoke(JoinPoint<?> joinPoint) {
+				log.info("1.调用接口 ------》》" + joinPoint.getInterface());
+				return joinPoint.proceed();
+			}
 		};
 	}
+
 	@Bean
 	public ConsumerFilter consumerFilter2() {
-		return (joinPoint) -> {
-			log.info("2.调用接口 ------》》" + joinPoint.getInterface());
-			return joinPoint.proceed();
+		return new ConsumerFilter() {
+			@Override
+			public Result invoke(JoinPoint<?> joinPoint) {
+				log.info("2.调用接口 ------》》" + joinPoint.getInterface());
+				return joinPoint.proceed();
+			}
 		};
 	}
+
 	@Bean
 	public ConsumerFilter consumerFilter3() {
-		return (joinPoint) -> {
-			log.info("3.调用接口 ------》》" + joinPoint.getInterface());
-			return joinPoint.proceed();
+		return new ConsumerFilter() {
+			@Override
+			public Result invoke(JoinPoint<?> joinPoint) {
+				log.info("3.调用接口 ------》》" + joinPoint.getInterface());
+				return joinPoint.proceed();
+			}
 		};
 	}
 }

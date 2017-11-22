@@ -8,10 +8,6 @@ public class TestRuntimeException extends RuntimeException{
 		super();
 	}
 
-	public TestRuntimeException(String arg0, Throwable throwable, boolean arg2, boolean arg3) {
-		super(arg0, throwable, arg2, arg3);
-	}
-
 	public TestRuntimeException(String arg0, Throwable throwable) {
 		super(arg0, throwable);
 	}
