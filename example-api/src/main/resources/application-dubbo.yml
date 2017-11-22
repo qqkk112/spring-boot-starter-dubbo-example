@@ -94,9 +94,11 @@ spring:
       
   #  如果需要配置多个协议可以使用如下方式
       protocols:
-        - name: dubbo-jvm
+        - id: dubbo-jvm
+          name: dubbo
           serialization: nativejava
-        - name: dubbo-hessian
+        - id: dubbo-hessian
+          name: dubbo
           serialization: hessian2
   #      - name: dubbo
   #        serialization: fastjson
