@@ -5,7 +5,7 @@
 
 	<groupId>com.gitee.reger</groupId>
 	<artifactId>spring-boot-starter-dubbo-example</artifactId>
-	<version>1.0.9</version>
+	<version>1.0.10</version>
 	<packaging>pom</packaging>
 
 	<name>spring-boot-starter-dubbo-example</name>
@@ -15,13 +15,13 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
-		<spring-boot-starter-dubbo.version>1.0.9</spring-boot-starter-dubbo.version>
+		<spring-boot-starter-dubbo.version>1.0.10</spring-boot-starter-dubbo.version>
 	</properties>
 	
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.8.RELEASE</version>
+		<version>1.5.9.RELEASE</version>
 		<relativePath />
 	</parent>
     <licenses>
