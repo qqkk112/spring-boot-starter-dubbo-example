@@ -19,7 +19,7 @@ public class ProviderFilterConfig {
 		return new ProviderFilter() {
 			@Override
 			public Result invoke(JoinPoint<?> joinPoint) {
-				log.info("1.方法{}被调用 ", joinPoint.getInterface());
+				log.info("1.方法{}.{}被调用 ", joinPoint.getInterface(),joinPoint.getMethodName());
 				return joinPoint.proceed();
 			}
 		};
@@ -30,7 +30,7 @@ public class ProviderFilterConfig {
 		return new ProviderFilter() {
 			@Override
 			public Result invoke(JoinPoint<?> joinPoint) {
-				log.info("2.方法{}被调用 ", joinPoint.getInterface());
+				log.info("2.方法{}.{}被调用 ", joinPoint.getInterface(),joinPoint.getMethodName());
 				return joinPoint.proceed();
 			}
 		};
@@ -41,7 +41,7 @@ public class ProviderFilterConfig {
 		return new ProviderFilter() {
 			@Override
 			public Result invoke(JoinPoint<?> joinPoint) {
-				log.info("3.方法{}被调用 ", joinPoint.getInterface());
+				log.info("3.方法{}.{}被调用 ", joinPoint.getInterface(),joinPoint.getMethodName());
 				return joinPoint.proceed();
 			}
 		};

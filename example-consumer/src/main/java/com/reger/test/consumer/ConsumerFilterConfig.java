@@ -19,7 +19,7 @@ public class ConsumerFilterConfig {
 		return new ConsumerFilter() {
 			@Override
 			public Result invoke(JoinPoint<?> joinPoint) {
-				log.info("1.调用接口 ------》》" + joinPoint.getInterface());
+				log.info("1.调用接口 ------》》{}.{}", joinPoint.getInterface(),joinPoint.getMethodName());
 				return joinPoint.proceed();
 			}
 		};
@@ -30,7 +30,7 @@ public class ConsumerFilterConfig {
 		return new ConsumerFilter() {
 			@Override
 			public Result invoke(JoinPoint<?> joinPoint) {
-				log.info("2.调用接口 ------》》" + joinPoint.getInterface());
+				log.info("2.调用接口 ------》》{}.{}", joinPoint.getInterface(),joinPoint.getMethodName());
 				return joinPoint.proceed();
 			}
 		};
@@ -41,7 +41,7 @@ public class ConsumerFilterConfig {
 		return new ConsumerFilter() {
 			@Override
 			public Result invoke(JoinPoint<?> joinPoint) {
-				log.info("3.调用接口 ------》》" + joinPoint.getInterface());
+				log.info("3.调用接口 ------》》{}.{}", joinPoint.getInterface(),joinPoint.getMethodName());
 				return joinPoint.proceed();
 			}
 		};
