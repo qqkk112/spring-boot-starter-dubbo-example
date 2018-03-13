@@ -106,7 +106,14 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-
+	<dependencies>
+	<!-- 如果使用dubbo2.6.0，把注释去掉 -->
+<!-- 		<dependency> 
+			<groupId>com.alibaba</groupId>
+			<artifactId>dubbo</artifactId>
+			<version>2.6.0</version>
+		</dependency> -->
+	</dependencies>
 	<modules>
 		<module>example-api</module>
 		<module>example-consumer</module>
