@@ -1,5 +1,7 @@
 
 spring:
+  jmx:
+    enabled: false
   profiles:
     active:
       - dubbo
@@ -28,7 +30,8 @@ spring:
       token: true              # 可选 服务治理 令牌验证，为空表示不开启，如果为true，表示随机生成动态令牌 2.0.5以上版本
 #      filter: providerFilter   # 可选 性能调优 服务提供方远程调用过程拦截器名称，多个名称用逗号分隔 2.0.5以上版本
       registry: test,test1              # 可选 配置关联 向指定注册中心注册，在多个注册中心时使用，值为spring.dubbo.registry.的id属性，多个注册中心ID用逗号分隔，如果不想将该服务注册到任何registry，可将值设为N/A 2.0.5以上版本
-      protocol: dubbo-jvm         # 可选 性能调优 协议名称 1.0.16以上版本
+#      protocol: dubbo-jvm         # 可选 性能调优 协议名称 1.0.16以上版本
+
 #      delay: -1               # 可选 性能调优 延迟注册服务时间(毫秒)- ，设为-1时，表示延迟到Spring容器初始化完成时暴露服务 2.0.5以上版本
 #      deprecated: false       # 可选 服务治理 服务是否过时，如果设为true，消费方引用时将打印服务过时警告error日志 2.0.5以上版本
 #      document:               # 可选 服务治理 服务文档URL 2.0.5以上版本

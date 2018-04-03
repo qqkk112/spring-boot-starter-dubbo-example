@@ -9,7 +9,7 @@ import com.reger.test.exception.TestRuntimeException;
 import com.test.dubbo.model.User;
 import com.test.dubbo.service.MathService;
 
-@Service(protocol="dubbo-hessian")
+@Service(protocol="dubbo-jvm",registry="test2")
 public class MathServiceImpl implements MathService {
 
 	@Override
