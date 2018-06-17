@@ -11,7 +11,7 @@
 	<properties>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>1.6</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -19,9 +19,4 @@
 			<artifactId>spring-boot-starter-dubbo</artifactId>
 		</dependency>
 	</dependencies>
-	<description>这是一个spring-boot-starter-dubbo的示例项目的api部分</description>
-	<organization>
-		<url>https://gitee.com/lei0719/spring-boot-starter-dubbo-example</url>
-		<name>reger</name>
-	</organization>
 </project>

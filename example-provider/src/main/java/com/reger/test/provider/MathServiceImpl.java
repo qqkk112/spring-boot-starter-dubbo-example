@@ -8,9 +8,15 @@ import com.alibaba.dubbo.config.annotation.Service;
 import com.reger.test.exception.TestRuntimeException;
 import com.test.dubbo.model.User;
 import com.test.dubbo.service.MathService;
+import org.springframework.beans.factory.annotation.Autowired;
 
-@Service(protocol="dubbo-jvm",registry="test2")
+import javax.annotation.Resource;
+
+@Service(protocol="dubbo-jvm",registry="test")
 public class MathServiceImpl implements MathService {
+
+//	@Autowired
+//	private UserService userService;
 
 	@Override
 	public Integer add( Integer a, Integer b) {
@@ -34,5 +40,11 @@ public class MathServiceImpl implements MathService {
 	public User getUser(User user) {
 		System.err.println("请求到达  " +user);
 		return user;
+	}
+
+	@Override
+	public String getList() {
+		return "";
+		//return JSON.toJSONString(userService.selectAll());
 	}
 }

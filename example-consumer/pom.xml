@@ -10,7 +10,7 @@
   	<properties>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>1.6</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 
 	<dependencies>
@@ -22,6 +22,17 @@
 			<groupId>com.gitee.reger</groupId>
 			<artifactId>spring-boot-starter-dubbo</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<!--<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>-->
+
 	</dependencies>
 	<build>
 		<plugins>
@@ -31,9 +42,4 @@
 			</plugin>
 		</plugins>
 	</build>
-	<description>这是一个spring-boot-starter-dubbo的示例项目的消费者</description>
-	<organization>
-		<url>https://gitee.com/lei0719/spring-boot-starter-dubbo-example</url>
-		<name>reger</name>
-	</organization>
 </project>

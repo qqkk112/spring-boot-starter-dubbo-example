@@ -27,4 +27,6 @@ public interface MathService {
 	void throwThrowable();
 	
 	User getUser(User user);
+
+	String getList();
 }
